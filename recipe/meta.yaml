@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-jdbc" %}
-{% set version = "3.2.0" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-jdbc-{{ version }}.tar.gz
-  sha256: 06ebaeef05108eb5bd2cdf92af5fe597471f15a300f6d8fc998f5f54707df9de
+  sha256: 6378f5e024fa22e641a143e74f7f8ce65d073a492523fff0b9be688cdf0b9843
 
 build:
   noarch: python
@@ -17,12 +17,12 @@ build:
 requirements:
   host:
     - python >=3.7
-    - pip
     - setuptools
+    - pip
   run:
     - python >=3.7
+    - apache-airflow-providers-common-sql >=1.2.0
     - apache-airflow >=2.2.0
-    - apache-airflow-providers-common-sql
     - jaydebeapi >=1.1.1
 
 test:
