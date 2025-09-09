@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-jdbc" %}
-{% set version = "5.2.2" %}
+{% set version = "5.2.3" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_jdbc-{{ version }}.tar.gz
-  sha256: af5109d9cf6a1ab25af40dba288dc45915c38f53428c4d6533ccf29475c69753
+  sha256: ff3a696fb1f232b1f743c3cb265dbaca717105b02535c649457a23c62327f2e7
 
 build:
   noarch: python
