@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-jdbc" %}
-{% set version = "5.2.4" %}
-{% set python_min = "3.10" %}
+{% set version = "5.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_jdbc-{{ version }}.tar.gz
-  sha256: 6b757b90c9e1f46a236b0dcb8710a939bf948e60da4bc5d2751a5bf14f9e67ba
+  sha256: 1549bb4a375e54e5d1654f846be753c8fa0106ce6b5e5e088dbc0ef86fb8f0b6
 
 build:
   noarch: python
@@ -40,7 +39,9 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-jdbc for Apache Airflow
   license: Apache-2.0
-  license_file: src/airflow/providers/jdbc/LICENSE
+  license_file:
+    - LICENSE
+    - NOTICE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-jdbc/stable/index.html
   dev_url: https://github.com/apache/airflow/
