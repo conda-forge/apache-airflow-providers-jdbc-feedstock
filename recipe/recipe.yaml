@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-jdbc
-  version: 5.4.0
+  version: "5.4.0"
 
 package:
   name: ${{ name|lower }}
@@ -26,6 +26,7 @@ requirements:
     - apache-airflow-providers-common-compat >=1.14.0
     - apache-airflow-providers-common-sql >=1.32.0
     - jaydebeapi >=1.1.1
+
 tests:
   - python:
       imports:
