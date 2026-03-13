@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-jdbc
-  version: "5.4.0"
+  version: "5.4.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_jdbc-${{ version }}.tar.gz
-  sha256: dd6d764032d9f737cabba421d5eecd0e11ade8c1c91221ecedd66a724e5854bd
+  sha256: ffaaa0c4f305aa8b36bb9d000feaea5946ce61f05b85d55160de958db771da74
 
 build:
   noarch: python
