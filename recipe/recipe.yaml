@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-jdbc
-  version: "5.5.0"
+  version: "5.5.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_jdbc-${{ version }}.tar.gz
-  sha256: d0bfef7613abd75c3e0e3e13fdb61cc8002e15f6b59716ea06ac3d46a55edef2
+  sha256: 1381a5de77382bf34960d25f9925d0ce4cc50181eb7ff2768158e7c6ebf4511f
 
 build:
   noarch: python
@@ -19,14 +19,14 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==3.12.0
+    - flit-core ==4.0.2
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.14.0
     - apache-airflow-providers-common-sql >=1.32.0
     - jaydebeapi >=1.1.1
-    # more restrictive for python >=3.14
+    # tightest of upstream's floors (python >=3.14)
     - jpype1 >=1.7.0
 
 tests:
