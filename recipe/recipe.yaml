@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-jdbc
-  version: "5.6.0"
+  version: "5.6.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_jdbc-${{ version }}.tar.gz
-  sha256: 918d979c76fde6a4bd100f1a7e5bc2a085e1288af2c2a8f1883f56ce2c7cb03f
+  sha256: f958164e61f9c75ab752d5910fcdb28ab33f0a8083d5c6cd1a7814018cc19b83
 
 build:
   noarch: python
@@ -19,7 +19,7 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - flit-core ==4.0.2
+    - flit-core ==4.1.0
   run:
     - python >=${{ python_min }}
     - apache-airflow >=2.11.0
